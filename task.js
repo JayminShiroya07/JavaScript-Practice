@@ -32,3 +32,22 @@ totalPostsofEachUser = posts.map(e => totslPosts
     .set(e.userId , (totslPosts.get(e.userId) || 0)+1 ))
 
 console.log(totslPosts)
+
+// 4. Create a function that returns a list of users along with their associated posts.
+
+var userWithPosts = [];
+
+for(let user of users){
+    let tempUser = {username:'',posts:[]}
+    tempUser.username = user.name;
+    for(let post of posts){
+        if(post.userId == user.id){
+            tempUser.posts.push(post)
+        }
+    }
+    userWithPosts.push(tempUser)
+}
+
+for(let us of userWithPosts){
+    console.log(us)
+}
