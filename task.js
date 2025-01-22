@@ -24,3 +24,11 @@ function makeNewUser(user){
 }
 
 console.log(new_users)
+
+// 3.  Create a function that will calculate and return the number of posts made by each user.
+var totslPosts = new Map();
+
+totalPostsofEachUser = posts.map(e => totslPosts
+    .set(e.userId , (totslPosts.get(e.userId) || 0)+1 ))
+
+console.log(totslPosts)
