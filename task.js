@@ -51,3 +51,17 @@ for(let user of users){
 for(let us of userWithPosts){
     console.log(us)
 }
+
+// 5. Create a function that returns all completed tasks by the user. Like if I want to get all the completed tasks of the user with ID 1 then it will return all the completed tasks of the user with ID 1.
+
+var userId = 1;
+ListCompletedTasks(userId)
+
+function ListCompletedTasks(userId){
+    let completed_tasks = []
+    for(let task of tasks){
+        if(task.userId == userId && task.completed == true)
+            completed_tasks.push(task);
+    }
+    console.log(completed_tasks)
+}
